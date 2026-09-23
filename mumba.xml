@@ -1,6 +1,7 @@
 <manifest>
     <!-- Remotes -->
     <remote name="ax" fetch="https://github.com/AxionAOSP-devices" />
+   <remote name="lost" fetch="https://github.com/lostsignal-502" />
 
     <!-- Device -->
     <project path="device/motorola/mumba"
@@ -31,4 +32,9 @@
     <project path="hardware/dolby"
         name="android_hardware_dolby"
         remote="ax" revision="lineage-23.2" />
+
+    <!-- Replacements for test -->
+    <remove-project name="android_frameworks_base" />
+    <project path="frameworks/base" name="android_frameworks_base" remote="lost" revision="lineage-23.2" clone-depth="1" />
+
 </manifest>
